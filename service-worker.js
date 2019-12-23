@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/quanvanbilling/precache-manifest.f65db1199a0f9184e546344a65b52f9b.js"
+  "/quanvanbilling/precache-manifest.a130f5d324b13526054fb1cb80fab6b0.js"
 );
 
 self.addEventListener('message', (event) => {
