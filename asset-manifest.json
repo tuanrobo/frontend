@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/quanvanbilling/static/css/main.6b8c39d2.chunk.css",
-    "main.js": "/quanvanbilling/static/js/main.c130536e.chunk.js",
-    "main.js.map": "/quanvanbilling/static/js/main.c130536e.chunk.js.map",
+    "main.js": "/quanvanbilling/static/js/main.c3db512a.chunk.js",
+    "main.js.map": "/quanvanbilling/static/js/main.c3db512a.chunk.js.map",
     "runtime-main.js": "/quanvanbilling/static/js/runtime-main.2a7876f2.js",
     "runtime-main.js.map": "/quanvanbilling/static/js/runtime-main.2a7876f2.js.map",
     "static/css/2.0624914a.chunk.css": "/quanvanbilling/static/css/2.0624914a.chunk.css",
-    "static/js/2.fe35a32a.chunk.js": "/quanvanbilling/static/js/2.fe35a32a.chunk.js",
-    "static/js/2.fe35a32a.chunk.js.map": "/quanvanbilling/static/js/2.fe35a32a.chunk.js.map",
+    "static/js/2.39be2712.chunk.js": "/quanvanbilling/static/js/2.39be2712.chunk.js",
+    "static/js/2.39be2712.chunk.js.map": "/quanvanbilling/static/js/2.39be2712.chunk.js.map",
     "index.html": "/quanvanbilling/index.html",
-    "precache-manifest.575671314a0ff33b9c0846619954d870.js": "/quanvanbilling/precache-manifest.575671314a0ff33b9c0846619954d870.js",
+    "precache-manifest.de1c077aff6ae94dfb79f5fb741242cc.js": "/quanvanbilling/precache-manifest.de1c077aff6ae94dfb79f5fb741242cc.js",
     "service-worker.js": "/quanvanbilling/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/quanvanbilling/static/css/2.0624914a.chunk.css.map",
     "static/css/main.6b8c39d2.chunk.css.map": "/quanvanbilling/static/css/main.6b8c39d2.chunk.css.map"
@@ -17,8 +17,8 @@
   "entrypoints": [
     "static/js/runtime-main.2a7876f2.js",
     "static/css/2.0624914a.chunk.css",
-    "static/js/2.fe35a32a.chunk.js",
+    "static/js/2.39be2712.chunk.js",
     "static/css/main.6b8c39d2.chunk.css",
-    "static/js/main.c130536e.chunk.js"
+    "static/js/main.c3db512a.chunk.js"
   ]
 }
