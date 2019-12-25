@@ -1,9 +1,8 @@
 {
 	"homepage": "https://tuanrobo.github.io/frontend",
 	"name": "frontend",
-	"main": "public/index.html",
 	"version": "0.1.0",
-	"private": false,
+	"private": true,
 	"dependencies": {
 		"@reach/component-component": "^0.5.0",
 		"@types/react-router-dom": "^5.1.3",
