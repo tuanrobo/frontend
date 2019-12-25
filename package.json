@@ -1,7 +1,7 @@
 {
 	"homepage": "https://tuanrobo.github.io/frontend",
 	"name": "frontend",
-	"main": "index.js",
+	"main": "public/index.html",
 	"version": "0.1.0",
 	"private": false,
 	"dependencies": {
