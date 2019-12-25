@@ -39,6 +39,9 @@
 		"type": "git",
 		"url": "https://github.com/tuanrobo/frontend"
 	},
+	"engines": {
+		"node": "10.x"
+	  },
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
