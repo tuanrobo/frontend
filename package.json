@@ -44,13 +44,14 @@
 		"node": "10.x"
 	  },
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "node src/index.js",
+		"build": "webpack",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
 	},
+	"heroku-run-build-script": true,
 	"eslintConfig": {
 		"extends": "react-app"
 	},
