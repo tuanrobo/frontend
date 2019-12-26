@@ -28,7 +28,7 @@
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-	"noEmit": true,
+	"noEmit": true,	
   },
   "exclude": [
     "backend/node_modules",
@@ -37,10 +37,10 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/order.select-field.component.tsx"
+	"src/order.select-field.component.tsx",
+	"baseUrl",
   ],
   "include": [
-	"**/*"
-	// "src", "index.js"
+	"src", "index.js"
   ]
 }
