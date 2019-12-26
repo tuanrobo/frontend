@@ -37,6 +37,6 @@
 	"src/order.select-field.component.tsx",
   ],
   "include": [
-	"src/*"
+	"file.ts"
   ]
 }
