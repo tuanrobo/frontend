@@ -29,17 +29,5 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
 	"noEmit": true,
-  },
-  "exclude": [
-    "backend/node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
-  ],
-  "include": [
-    "src", "index.js"
-  ]
+  }
 }
