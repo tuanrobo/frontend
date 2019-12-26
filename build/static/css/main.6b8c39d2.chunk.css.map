@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,UACC,WAAY,CACb,eACA,CAEA,oBACC,cACD","file":"main.6b8c39d2.chunk.css","sourcesContent":["html, body {\n\theight: 100%;\nmin-height: 100%;\n}\n\n.css-yk16xz-control {\n\tbackground: red\n}\n\n\n"]}
