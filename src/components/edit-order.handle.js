@@ -1,10 +1,11 @@
 import React from "react";
 import { Formik } from "formik";
-import axios from 'axios';
 import OrderForm from "./edit-order.form";
 import * as Yup from 'yup';
 // import { DisplayFormikState } from './order.helper';
 import { withRouter } from "react-router-dom";
+
+import axiosInstance from "./API.config"
 
 import Swal from 'sweetalert2';
 
@@ -22,8 +23,6 @@ const orderValidateSchema = Yup.object().shape({
 })
 
 
-const serverURL =  'https://localhost:5000/'
-
 class OrderHandle extends React.Component {
 
 	constructor(props) {
@@ -37,7 +36,7 @@ class OrderHandle extends React.Component {
 
 	componentDidMount() {
 		let orderID = this.props.match.params.id
-			axios.get(serverURL + 'orders/' + orderID)
+		axiosInstance.get('orders/' + orderID)
 				.then(response => {
 					this.setState({
 						customername: response.data.customername,
@@ -52,7 +51,7 @@ class OrderHandle extends React.Component {
 					console.log(error);
 				})
 
-			axios.get(serverURL + 'customers/')
+				axiosInstance.get('customers/')
 				.then(response => {
 					if (response.data.length > 0) {
 						this.setState({
@@ -62,7 +61,7 @@ class OrderHandle extends React.Component {
 					}
 				});
 
-			axios.get(serverURL + 'products/')
+				axiosInstance.get('products/')
 				.then(response => {
 					if (response.data.length > 0) {
 						this.setState({
@@ -98,8 +97,7 @@ class OrderHandle extends React.Component {
 				paid_status,
 				date,
 			};
-			console.log("Orders submitted: ", order)
-			const url = 'https://localhost:5000/orders/update/' + this.props.match.params.id
+			console.log("Orders submitted: ", order)			
 
 			var success = true
 
@@ -108,7 +106,7 @@ class OrderHandle extends React.Component {
 			}
 
 
-			await axios.post(url, order)
+			await axiosInstance.post('orders/update/' + this.props.match.params.id, order)
 				.then(res => Swal.fire({
 					position: 'center',
 					icon: 'success',

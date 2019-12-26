@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
+import axiosInstance from "./API.config"
+
 import Swal from "sweetalert2";
+
 
 export default class CreateNewImport extends Component {
 	constructor(props) {
@@ -22,7 +24,7 @@ export default class CreateNewImport extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:5000/products/").then(response => {
+		axiosInstance.get("products/").then(response => {
 			if (response.data.length > 0) {
 				this.setState({
 					products: response.data.map(product => product.product),
@@ -63,8 +65,8 @@ export default class CreateNewImport extends Component {
 		const headers = {
 			"Content-Type": "application/json"
 		};
-		axios
-			.post("http://localhost:5000/import/add", imports, { headers })
+		axiosInstance
+			.post("import/add", imports, { headers })
 			.then(res =>
 				Swal.fire({
 					position: "center",

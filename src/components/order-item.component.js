@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import axiosInstance from "./API.config"
 
 
 
@@ -23,7 +23,7 @@ export default class OrderItems extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/products/')
+		axiosInstance.get('products/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({

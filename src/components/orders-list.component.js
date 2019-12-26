@@ -1,8 +1,12 @@
 //COMPONENTS
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import Swal from "sweetalert2";
+
+
+import Inventory from "./inventory.component"
+
+import axiosInstance from "./API.config"
 
 // UI
 import { AiFillFileAdd } from "react-icons/ai";
@@ -11,7 +15,6 @@ import { TiUser } from 'react-icons/ti';
 import { MdEdit, MdAttachMoney, MdDelete, MdPrint, MdMoreVert, MdMoneyOff } from "react-icons/md";
 import { FiPackage } from 'react-icons/fi';
 
-import Inventory from "./inventory.component"
 
 
 
@@ -166,9 +169,6 @@ function Order(props) {
 	);
 }
 
-const serverURL =  'https://quanvanbilling-backend.herokuapp.com/'
-
-console.log("get port from", serverURL)
 
 export default class OrdersList extends Component {
 	constructor(props) {
@@ -179,9 +179,9 @@ export default class OrdersList extends Component {
 		};
 	}
 
-	componentDidMount() {
-		axios
-			.get(serverURL + "orders/")
+	componentDidMount() {		
+		axiosInstance
+			.get('orders/')
 			.then(response => {
 				this.setState({ orders: response.data });
 			})
@@ -191,8 +191,8 @@ export default class OrdersList extends Component {
 	}
 
 	deleteOrder(id) {
-		axios
-			.delete(serverURL + "orders/" + id)
+		axiosInstance
+			.delete("orders/" + id)
 			.then(res => console.log("Một hoá đơn vừa được xoá: ", res.data));
 		this.setState({
 			orders: this.state.orders.filter(el => el._id !== id)

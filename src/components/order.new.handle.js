@@ -1,9 +1,10 @@
 import React from "react";
 import { Formik } from "formik";
-import axios from 'axios';
 import OrderForm from "./order.new.form";
 import * as Yup from 'yup';
 // import { DisplayFormikState } from './order.helper';
+
+import axiosInstance from "./API.config"
 
 import Swal from 'sweetalert2';
 
@@ -19,9 +20,8 @@ const orderValidateSchema = Yup.object().shape({
 		})
 		),
 	description: Yup.string()
-		.min(2, 'Quá ngắn!')		
+		.min(2, 'Quá ngắn!')
 })
-  
 
 export default class OrderHandle extends React.Component {
 	constructor(props) {
@@ -30,12 +30,12 @@ export default class OrderHandle extends React.Component {
 			customers: [],
 			products: [],
 			customerdata: [],
-			productdata: [],			
+			productdata: [],
 		}
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/customers/')
+		axiosInstance.get('customers/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
@@ -45,17 +45,17 @@ export default class OrderHandle extends React.Component {
 				}
 			});
 
-		axios.get('http://localhost:5000/products/')
+		axiosInstance.get('products/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
 						products: response.data.map(product => product.product),
 						productdata: response.data
-					})					
+					})
 				}
 			})
 
-		axios.get('http://localhost:5000/inventories/')
+		axiosInstance.get('inventories/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
@@ -84,7 +84,7 @@ export default class OrderHandle extends React.Component {
 		}, 800);
 	};
 
-	
+
 	async addOrder(customername, order_items, description, paid_status, date) {
 		const order = {
 			customername,
@@ -93,10 +93,7 @@ export default class OrderHandle extends React.Component {
 			paid_status,
 			date,
 		};
-		console.log("Orders submitted: ", order)
-		const url = `http://localhost:5000/orders/add`;
-
-		// const response = await axios.post(url, order);
+		console.log("Orders submitted: ", order)		
 
 		var success = true
 
@@ -105,7 +102,7 @@ export default class OrderHandle extends React.Component {
 		}
 
 
-		await axios.post(url, order)
+		await axiosInstance.post('orders/add', order)
 			.then(res => Swal.fire({
 				position: 'center',
 				icon: 'success',

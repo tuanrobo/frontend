@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import axios from "axios";
+import axiosInstance from "./API.config"
 
 import { FiPackage } from 'react-icons/fi';
+
 
 export default class Inventory extends Component {
 	constructor(props) {
@@ -12,9 +13,8 @@ export default class Inventory extends Component {
 	}
 
 
-	componentDidMount() {
-		const serverURL = 'http://localhost:5000/'
-		axios.get(serverURL + 'inventories/')
+	componentDidMount() {		
+		axiosInstance.get('inventories/')
 			.then(res => {
 				const inStocks = res.data
 				this.setState({ inStocks })

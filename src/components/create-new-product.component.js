@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axiosInstance from "./API.config"
+
 
 export default class CreateNewProduct extends Component {
 	handleChange = key => e => {
@@ -26,8 +27,7 @@ export default class CreateNewProduct extends Component {
 			model: this.state.model,
 		}
 
-		// console.log(product);
-		axios.post('http://localhost:5000/products/add', product)
+		axiosInstance.post('product/add', product)
 			.then(res => console.log(res.data));
 
 		this.setState({
