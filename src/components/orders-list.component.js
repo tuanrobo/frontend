@@ -166,7 +166,7 @@ function Order(props) {
 	);
 }
 
-const serverURL =  'http://quanvanbilling-backend.herokuapp.com/'
+const serverURL =  'https://quanvanbilling-backend.herokuapp.com/'
 
 console.log("get port from", serverURL)
 
