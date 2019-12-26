@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import AxiosInstance from "./api.config"
+import AxiosInstance from "./API.config"
 
 import Swal from "sweetalert2";
 

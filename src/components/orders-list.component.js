@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 import Inventory from "./inventory.component"
 
-import AxiosInstance from "./api.config"
+import AxiosInstance from "./API.config"
 
 // UI
 import { AiFillFileAdd } from "react-icons/ai";

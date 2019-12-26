@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AxiosInstance from "./api.config"
+import AxiosInstance from "./API.config"
 
 import { FiPackage } from 'react-icons/fi';
 
