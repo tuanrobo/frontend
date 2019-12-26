@@ -6,7 +6,6 @@
 .vscode/
 /.pnp
 .pnp.js
-src/
 
 # testing
 /coverage
@@ -26,3 +25,9 @@ yarn-debug.log*
 yarn-error.log*
 
 tsconfig.json
+
+src/*
+public/*
+build/static/css/*.map
+build/static/js/*.map
+static.json 
