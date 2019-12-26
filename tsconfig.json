@@ -37,9 +37,10 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
+    "src/order.select-field.component.tsx"
   ],
   "include": [
-    "src", "index.js"
+	// "src", "index.js"
+	"empty.ts"
   ]
 }
