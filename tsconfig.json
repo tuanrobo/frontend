@@ -28,16 +28,14 @@
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-	"noEmit": true,	
+    "noEmit": true
   },
   "exclude": [
     "node_modules",
     "build",
     "webpack",    
-	"src/order.select-field.component.tsx",
-	"src/react-app-env.d.ts"
   ],
   "include": [
-	"file.ts"
+    "./src"
   ]
 }
