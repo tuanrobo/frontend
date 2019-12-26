@@ -166,9 +166,9 @@ function Order(props) {
 	);
 }
 
-const serverURL =  'http://localhost:5000/'
+const serverURL =  'http://quanvanbilling-backend.herokuapp.com/'
 
-// const serverURL =  'http://quanvanbilling-backend.herokuapp.com:41489/'
+console.log("get port from", serverURL)
 
 export default class OrdersList extends Component {
 	constructor(props) {
