@@ -40,7 +40,6 @@
     "src/order.select-field.component.tsx"
   ],
   "include": [
-	// "src", "index.js"
-	"empty.ts"
+	"src", "index.js"
   ]
 }
