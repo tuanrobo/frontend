@@ -14,7 +14,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "/",
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
@@ -28,7 +28,7 @@
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+	"noEmit": true,
   },
   "exclude": [
     "backend/node_modules",

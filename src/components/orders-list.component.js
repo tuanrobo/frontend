@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 import Inventory from "./inventory.component"
 
-import axiosInstance from "./API.config"
+import AxiosInstance from "./api.config"
 
 // UI
 import { AiFillFileAdd } from "react-icons/ai";
@@ -180,7 +180,7 @@ export default class OrdersList extends Component {
 	}
 
 	componentDidMount() {		
-		axiosInstance
+		AxiosInstance
 			.get('orders/')
 			.then(response => {
 				this.setState({ orders: response.data });
@@ -191,7 +191,7 @@ export default class OrdersList extends Component {
 	}
 
 	deleteOrder(id) {
-		axiosInstance
+		AxiosInstance
 			.delete("orders/" + id)
 			.then(res => console.log("Một hoá đơn vừa được xoá: ", res.data));
 		this.setState({

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axiosInstance from "./API.config"
+import AxiosInstance from "./api.config"
 
 import { FiPackage } from 'react-icons/fi';
 
@@ -14,7 +14,7 @@ export default class Inventory extends Component {
 
 
 	componentDidMount() {		
-		axiosInstance.get('inventories/')
+		AxiosInstance.get('inventories/')
 			.then(res => {
 				const inStocks = res.data
 				this.setState({ inStocks })

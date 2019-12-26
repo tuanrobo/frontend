@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axiosInstance from "./API.config"
+import AxiosInstance from "./api.config"
 
 
 
@@ -34,7 +34,7 @@ export default class CreateNewCustomer extends Component {
 		}
 
 		console.log(customer);
-		axiosInstance.post("add", customer)
+		AxiosInstance.post("add", customer)
 			.then(res => console.log(res.data));
 
 		this.setState({

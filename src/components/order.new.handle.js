@@ -4,7 +4,7 @@ import OrderForm from "./order.new.form";
 import * as Yup from 'yup';
 // import { DisplayFormikState } from './order.helper';
 
-import axiosInstance from "./API.config"
+import AxiosInstance from "./api.config"
 
 import Swal from 'sweetalert2';
 
@@ -35,7 +35,7 @@ export default class OrderHandle extends React.Component {
 	}
 
 	componentDidMount() {
-		axiosInstance.get('customers/')
+		AxiosInstance.get('customers/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
@@ -45,7 +45,7 @@ export default class OrderHandle extends React.Component {
 				}
 			});
 
-		axiosInstance.get('products/')
+		AxiosInstance.get('products/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
@@ -55,7 +55,7 @@ export default class OrderHandle extends React.Component {
 				}
 			})
 
-		axiosInstance.get('inventories/')
+		AxiosInstance.get('inventories/')
 			.then(response => {
 				if (response.data.length > 0) {
 					this.setState({
@@ -102,7 +102,7 @@ export default class OrderHandle extends React.Component {
 		}
 
 
-		await axiosInstance.post('orders/add', order)
+		await AxiosInstance.post('orders/add', order)
 			.then(res => Swal.fire({
 				position: 'center',
 				icon: 'success',

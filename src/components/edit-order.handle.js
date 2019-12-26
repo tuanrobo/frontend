@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 // import { DisplayFormikState } from './order.helper';
 import { withRouter } from "react-router-dom";
 
-import axiosInstance from "./API.config"
+import AxiosInstance from "./api.config"
 
 import Swal from 'sweetalert2';
 
@@ -36,7 +36,7 @@ class OrderHandle extends React.Component {
 
 	componentDidMount() {
 		let orderID = this.props.match.params.id
-		axiosInstance.get('orders/' + orderID)
+		AxiosInstance.get('orders/' + orderID)
 				.then(response => {
 					this.setState({
 						customername: response.data.customername,
@@ -51,7 +51,7 @@ class OrderHandle extends React.Component {
 					console.log(error);
 				})
 
-				axiosInstance.get('customers/')
+				AxiosInstance.get('customers/')
 				.then(response => {
 					if (response.data.length > 0) {
 						this.setState({
@@ -61,7 +61,7 @@ class OrderHandle extends React.Component {
 					}
 				});
 
-				axiosInstance.get('products/')
+				AxiosInstance.get('products/')
 				.then(response => {
 					if (response.data.length > 0) {
 						this.setState({
@@ -106,7 +106,7 @@ class OrderHandle extends React.Component {
 			}
 
 
-			await axiosInstance.post('orders/update/' + this.props.match.params.id, order)
+			await AxiosInstance.post('orders/update/' + this.props.match.params.id, order)
 				.then(res => Swal.fire({
 					position: 'center',
 					icon: 'success',
