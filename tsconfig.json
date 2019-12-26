@@ -35,6 +35,7 @@
     "build",
     "webpack",    
 	"src/order.select-field.component.tsx",
+	"src/react-app-env.d.ts"
   ],
   "include": [
 	"file.ts"
